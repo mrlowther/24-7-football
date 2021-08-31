@@ -1,4 +1,5 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 export default function Cards() {
     const linkStyle = { border: '1px black', padding: '5px' };
