@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
 const Signup = () => {
