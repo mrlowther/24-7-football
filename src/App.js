@@ -1,13 +1,6 @@
-// import './App.css';
-import Nav from './components/Nav';
+import React from "react";
+import MainContainer from "./components/MainContainer";
 
-function App() {
-  return (
-    <div className="container">
-      <Nav />
- 
-    </div>
-  );
-}
+const App = () => <MainContainer />;
 
 export default App;
