@@ -27,7 +27,7 @@ export default function CenteredTabs() {
 
         <Route path="/" render={(history) => (
 
-            <Tabs indicatorColor="primary" textColor="primary" centered value={history.location.pathname}>
+            <Tabs indicatorColor="primary" textColor="secondary" centered value={history.location.pathname}>
                 <Tab
                     label="Home"
                     value={routes[0]}
