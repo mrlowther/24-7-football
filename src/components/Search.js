@@ -1,10 +1,8 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
-export default function Home() {
-
-
+export default function Search() {
     return (
-      <div>home</div>
+      <Typography variant="h3">This is Search.js.</Typography>
     );
 }
