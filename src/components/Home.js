@@ -1,4 +1,5 @@
 import React from 'react';
+import Cards from './Cards';
 import Typography from '@material-ui/core/Typography';
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
 
     <Typography variant="h5" align="center">🏈 <i>NFL Player Stats, Made Easy!</i> 🏈</Typography>
 
-    <Typography variant="h5" align="center">random player card(s) here?</Typography>
+    <Cards />
 
     </>
   );

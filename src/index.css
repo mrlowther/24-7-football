@@ -22,3 +22,10 @@ h6 {
 p {
     padding: 20px;
 }
+
+.teamLogo {
+
+    height: 95%;
+    width: 95%;
+    padding:10px;
+}
