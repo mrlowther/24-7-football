@@ -1,8 +1,9 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import { Paper, Grid } from '@material-ui/core';
+import { typography } from '@material-ui/system';
+
 import logo1 from './images/team-logos/logo-chiefs.png';
 import logo2 from './images/team-logos/logo-seahawks.png';
 import logo3 from './images/team-logos/logo-packers.png';
@@ -34,45 +35,61 @@ export default function Cards() {
         <Grid container spacing={3} alignItems="flex-start">
 
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Kansas City Chiefs</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Kansas City Chiefs</Typography>
                 <img src={logo1} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Seattle Seahawks</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Seattle Seahawks</Typography>
                 <img src={logo2} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Green Bay Packers</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Green Bay Packers</Typography>
                 <img src={logo3} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Tampa Bay Buccaneers</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Tampa Bay Buccaneers</Typography>
                 <img src={logo4} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>San Francisco 49ers</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">San Francisco 49ers</Typography>
                 <img src={logo5} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Los Angeles Chargers</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Los Angeles Chargers</Typography>
                 <img src={logo6} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>New England Patriots</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">New England Patriots</Typography>
                 <img src={logo7} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
             <Grid item xs={12} sm={6} md={4} lg={3}>
-                <Paper className={classes.paper}>Miami Dolphins</Paper>
+                <Paper>
+                <Typography variant="h5" align="center">Miami Dolphins</Typography>
                 <img src={logo8} className="teamLogo" alt="" />
+                </Paper>
             </Grid>
-           
+         
+          
         </Grid>
     </div>
   );

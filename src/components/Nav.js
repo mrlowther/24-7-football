@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Tabs, Tab}  from '@material-ui/core';
+import { Paper, Tabs, Tab }  from '@material-ui/core';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
