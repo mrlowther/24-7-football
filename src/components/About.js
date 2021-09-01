@@ -11,10 +11,12 @@ export default function About() {
 
       <Typography variant="h5">Which NFL receiver is the fastest? What team has the youngest linebacker group? If you want to know the answers and keep track of your favorite players, <strong>24/7 Football for Kids</strong> is just for you!</Typography>
       
-
       <Typography variant="h5">We make it easy to <strong>search</strong> for a player on any of the 32 NFL teams so you can get quick and easy stats, then <strong>save</strong> them to your profile so you can view them later. Here's how:</Typography>
 
-      <Typography variant="h5">Insert simple how-to list here.</Typography>
+      <Typography variant="h6">🏈 step 1</Typography>
+      <Typography variant="h6">🏈 step 2</Typography>
+      <Typography variant="h6">🏈 step 3</Typography>
+      <Typography variant="h6">🏈 step 4</Typography>
 
       </>
     );
