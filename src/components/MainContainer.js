@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from './Nav';
-import Home from './Home';
+//import Home from './Home';
 // import Signup from './pages/Signup';
-import About from './About';
-import Contact from './Contact';
+//import About from './About';
+//import Contact from './Contact';
 import { Typography } from '@material-ui/core';
+import logo from './247FBK-Banner.jpg';
 
 export default function MainContainer() {
   // const [currentPage, setCurrentPage] = useState('Home');
@@ -35,7 +36,7 @@ export default function MainContainer() {
         align="center"
         gutterBottom
     >
-        24/7 Football for Kids
+        <img src = {logo} id="banner" alt="logo" />
      </Typography>
     <Nav />
     </>
