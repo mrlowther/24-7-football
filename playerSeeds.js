@@ -3,6 +3,7 @@ const seedDb = async ()=>{
     await db.Owner.bulkCreate([
         {
             playerName:"Sean Mannion",
+            team: `Seattle Seahawks`,
             number:`9`,
             position:`QB`,
             height:`6'6"`,
@@ -12,6 +13,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Geno Smith`,
+            team: `Seattle Seahawks`,
             number:`7`,
             position:`QB`,
             height:`6'3"`,
@@ -20,7 +22,9 @@ const seedDb = async ()=>{
     
         },
         {
+            
             playerName:`Russell Wilson`,
+            team: `Seattle Seahawks`,
             number:`3`,
             position:`QB`,
             height:`5'11"`,
@@ -30,6 +34,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Chris Carson`,
+            team: `Seattle Seahawks`,
             number:`32`,
             position:`RB`,
             height:`5'11"`,
@@ -39,6 +44,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Alex Collins`,
+            team: `Seattle Seahawks`,
             number:`41`,
             position:`RB`,
             height:`5'10'`,
@@ -48,6 +54,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`DeeJay Dallas`,
+            team: `Seattle Seahawks`,
             number:`31`,
             position:`RB`,
             height:`5'10"`,
@@ -57,6 +64,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Travis Homer`,
+            team: `Seattle Seahawks`,
             number:`25`,
             position:`RB`,
             height:`5'10"`,
@@ -66,6 +74,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Rashaad Penny`,
+            team: `Seattle Seahawks`,
             number:`20`,
             position:`RB`,
             height:`5'11"`,
@@ -75,6 +84,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Nick Bellore`,
+            team: `Seattle Seahawks`,
             number:`44`,
             position:`FB/LB`,
             height:`6'1"`,
@@ -84,6 +94,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Dee Eskridge`,
+            team: `Seattle Seahawks`,
             number:`1`,
             position:`WR`,
             height:`5'9"`,
@@ -93,6 +104,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Tyler Lockett`,
+            team: `Seattle Seahawks`,
             number:`16`,
             position:`WR`,
             height:`5'10"`,
@@ -102,6 +114,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`DK Metcalf`,
+            team: `Seattle Seahawks`,
             number:`14`,
             position:`WR`,
             height:`6'4"`,
@@ -111,6 +124,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Freddie Swain`,
+            team: `Seattle Seahawks`,
             number:`18`,
             position:`WR`,
             height:`6'0"`,
@@ -120,6 +134,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Will Dissly`,
+            team: `Seattle Seahawks`,
             number:`89`,
             position:`TE`,
             height:`6'4"`,
@@ -129,6 +144,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Gerald Everett`,
+            team: `Seattle Seahawks`,
             number:`81`,
             position:`TE`,
             height:`6'3"`,
@@ -138,6 +154,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Colby Parkinson`,
+            team: `Seattle Seahawks`,
             number:`84`,
             position:`TE`,
             height:`6'7"`,
@@ -147,6 +164,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Kyle Fuller`,
+            team: `Seattle Seahawks`,
             number:`61`,
             position:`C`,
             height:`6'5"`,
@@ -156,6 +174,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Ethan Pocic`,
+            team: `Seattle Seahawks`,
             number:`77`,
             position:`C`,
             height:`6'6"`,
@@ -165,6 +184,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Phil Haynes`,
+            team: `Seattle Seahawks`,
             number:`G`,
             position:`60`,
             height:`6'4"`,
@@ -174,6 +194,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Gabe Jackson`,
+            team: `Seattle Seahawks`,
             number:`66`,
             position:`G`,
             height:`6'3"`,
@@ -183,6 +204,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Damien Lewis`,
+            team: `Seattle Seahawks`,
             number:`68`,
             position:`G`,
             height:`6'2"`,
@@ -192,6 +214,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Duane Brown`,
+            team: `Seattle Seahawks`,
             number:`76`,
             position:`OT`,
             height:`6'4"`,
@@ -201,6 +224,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Jake Curhan`,
+            team: `Seattle Seahawks`,
             number:`74`,
             position:`OT`,
             height:`6'6"`,
@@ -210,6 +234,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Stone Forsythe`,
+            team: `Seattle Seahawks`,
             number:`78`,
             position:`OT`,
             height:`6'8"`,
@@ -219,6 +244,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Jamarco Jones`,
+            team: `Seattle Seahawks`,
             number:`73`,
             position:`OT`,
             height:`6'4"`,
@@ -228,6 +254,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Cedric Ogbuehi`,
+            team: `Seattle Seahawks`,
             number:`70`,
             position:`OT`,
             height:`6'5"`,
@@ -237,6 +264,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Brandon Shell`,
+            team: `Seattle Seahawks`,
             number:`72`,
             position:`OT`,
             height:`6'5"`,
@@ -246,6 +274,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`LJ Collier`,
+            team: `Seattle Seahawks`,
             number:`91`,
             position:`DE`,
             height:`6'2"`,
@@ -255,6 +284,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Carlos Dunlap`,
+            team: `Seattle Seahawks`,
             number:`8`,
             position:`DE`,
             height:`6'6"`,
@@ -264,6 +294,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Rasheem Green`,
+            team: `Seattle Seahawks`,
             number:`94`,
             position:`DE`,
             height:`6'4"`,
@@ -273,6 +304,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Kerry Hyder Jr.`,
+            team: `Seattle Seahawks`,
             number:`51`,
             position:`DE`,
             height:`6'2"`,
@@ -282,6 +314,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Benson Mayowa`,
+            team: `Seattle Seahawks`,
             number:`95`,
             position:`DE`,
             height:`6'3"`,
@@ -291,6 +324,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Alton Robinson`,
+            team: `Seattle Seahawks`,
             number:`98`,
             position:`DE`,
             height:`6'3"`,
@@ -300,6 +334,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Darrell Taylor`,
+            team: `Seattle Seahawks`,
             number:`52`,
             position:`DE`,
             height:`6'4"`,
@@ -309,6 +344,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Poona Ford`,
+            team: `Seattle Seahawks`,
             number:`97`,
             position:`DT`,
             height:`5'11"`,
@@ -318,6 +354,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Bryan Mone`,
+            team: `Seattle Seahawks`,
             number:`90`,
             position:`DT`,
             height:`6'3"`,
@@ -327,6 +364,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Al Woods`,
+            team: `Seattle Seahawks`,
             number:`99`,
             position:`DT`,
             height:`6'4"`,
@@ -336,6 +374,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Cody Barton`,
+            team: `Seattle Seahawks`,
             number:`57`,
             position:`LB`,
             height:`6'2"`,
@@ -345,6 +384,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Jordyn Brooks`,
+            team: `Seattle Seahawks`,
             number:`56`,
             position:`LB`,
             height:`6'0"`,
@@ -354,6 +394,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Ben Burr-Kirven`,
+            team: `Seattle Seahawks`,
             number:`55`,
             position:`LB`,
             height:`6'0"`,
@@ -363,6 +404,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Bobby Wagner`,
+            team: `Seattle Seahawks`,
             number:`54`,
             position:`LB`,
             height:`6'0"`,
@@ -372,6 +414,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Tre Brown`,
+            team: `Seattle Seahawks`,
             number:`22`,
             position:`CB`,
             height:`5'10"`,
@@ -381,6 +424,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Tre Flowers`,
+            team: `Seattle Seahawks`,
             number:`21`,
             position:`CB`,
             height:`6'3"`,
@@ -390,6 +434,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Sidney Jones IV`,
+            team: `Seattle Seahawks`,
             number:``,
             position:`CB`,
             height:`6'0"`,
@@ -399,6 +444,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`DJ Reed`,
+            team: `Seattle Seahawks`,
             number:`29`,
             position:`CB`,
             height:`5'9"`,
@@ -408,6 +454,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Ahkello Witherspoon`,
+            team: `Seattle Seahawks`,
             number:`2`,
             position:`CB`,
             height:`6'3"`,
@@ -417,6 +464,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Jamal Adams`,
+            team: `Seattle Seahawks`,
             number:`33`,
             position:`S`,
             height:`6'1"`,
@@ -426,6 +474,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Ugo Amadi`,
+            team: `Seattle Seahawks`,
             number:`28`,
             position:`S`,
             height:`5'9"`,
@@ -435,6 +484,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Marquise Blair`,
+            team: `Seattle Seahawks`,
             number:`27`,
             position:`S`,
             height:`6'1"`,
@@ -444,6 +494,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Quandre Diggs`,
+            team: `Seattle Seahawks`,
             number:`6`,
             position:`S`,
             height:`5'9"`,
@@ -453,6 +504,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Ryan Neal`,
+            team: `Seattle Seahawks`,
             number:`26`,
             position:`S`,
             height:`6'3"`,
@@ -463,6 +515,7 @@ const seedDb = async ()=>{
 
         {
             playerName:`Jason Myers`,
+            team: `Seattle Seahawks`,
             number:`5`,
             position:`K`,
             height:`5'10"`,
@@ -472,6 +525,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Michael Dickson`,
+            team: `Seattle Seahawks`,
             number:`4`,
             position:`P`,
             height:`6'2"`,
@@ -481,6 +535,7 @@ const seedDb = async ()=>{
         },
         {
             playerName:`Tyler Ott`,
+            team: `Seattle Seahawks`,
             number:`69`,
             position:`LS`,
             height:`6'3"`,
