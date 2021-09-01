@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-// import './style.css';
+import { makeStyles, TextField, Typography} from '@material-ui/core';
 
 // Here we import a helper function that will check if the email is valid
 import { checkPassword, validateEmail } from '../utils/helpers';
+import { blockStatement, classExpression } from '@babel/types';
+
 
 function Form() {
   // Create state variables for the fields in the form
@@ -12,47 +14,85 @@ function Form() {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
-
-    // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'userName') {
-      setUserName(inputValue);
-    } else {
-      setPassword(inputValue);
+  const useStyles = makeStyles({
+    field: {
+        marginLeft: 20,
+        marginTop: 20,
+        marginBottom: 20,
+        display: 'block'
     }
-  };
+  })
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+    const classes = useStyles();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
+    const handleInputChange = (e) => {
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
-    setEmail('');
-  };
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
 
-  return (
+        if (inputType === 'email') {
+        setEmail(inputValue);
+        } else if (inputType === 'userName') {
+        setUserName(inputValue);
+        } else {
+        setPassword(inputValue);
+        }
+    };
+
+    const handleFormSubmit = (e) => {
+
+        e.preventDefault();
+
+        if (!validateEmail(email) || !userName) {
+        setErrorMessage('Email or username is invalid.');
+        return;
+        }
+
+        if (!checkPassword(password)) {
+        setErrorMessage(`Choose a more secure password for the account: ${userName}.`);
+        return;
+        }
+
+        setUserName('');
+        setPassword('');
+        setEmail('');
+    };
+
+    return (
+    <>
+    <div>
+        <form noValidate autoComplete="off">
+
+            <TextField
+                className = {classes.field}
+                label="User Name"
+                variant="outlined"
+                required
+            />
+
+            <TextField
+                className = {classes.field}
+                label="Email"
+                variant="outlined"
+                required
+            />
+
+            <TextField
+                className = {classes.field}
+                label="Message"
+                variant="outlined"
+                required
+                multiline
+                rows={3}
+                fullWidth
+            />
+
+        </form>
+        <Typography variant="body2">*required field</Typography>
+    </div>
+
+    {/*
     <div>
       <form className="form">
         <input
@@ -84,6 +124,8 @@ function Form() {
         </div>
       )}
     </div>
+    */}
+    </>
   );
 }
 
