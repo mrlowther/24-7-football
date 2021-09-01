@@ -1,8 +1,6 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Grid } from '@material-ui/core';
-import { typography } from '@material-ui/system';
+import { Paper, Grid, Typography } from '@material-ui/core';
 
 import logo1 from './images/team-logos/logo-chiefs.png';
 import logo2 from './images/team-logos/logo-seahawks.png';
