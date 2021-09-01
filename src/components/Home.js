@@ -2,9 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
 export default function Home() {
-
-
     return (
-      <div>home</div>
+      <Typography align="center">footer</Typography>
     );
 }
