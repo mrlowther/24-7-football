@@ -9,8 +9,11 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -48,12 +51,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrlowther/24-7-football.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrlowther/24-7-football/issues"
   },
-  "homepage": "https://github.com/mrlowther/24-7-football#readme"
+  "homepage": ""
 }
