@@ -1,6 +1,9 @@
 {
   "name": "24-7-football",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.17.3"
+  },
   "private": true,
   "dependencies": {
     "@fontsource/roboto": "^4.5.0",
