@@ -49,19 +49,19 @@ export default function CenteredTabs() {
                 />
                 <Tab
                     label="Sign Up"
-                    value={routes[2]}
+                    value={routes[3]}
                     component={Link}
                     to={routes[3]}
                 />
                 <Tab
                     label="About 247FBK"
-                    value={routes[3]}
+                    value={routes[4]}
                     component={Link}
                     to={routes[4]}
                 />
                 <Tab
                     label="Contact Us"
-                    value={routes[4]}
+                    value={routes[5]}
                     component={Link}
                     to={routes[5]}
                 />
