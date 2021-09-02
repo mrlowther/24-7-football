@@ -1,89 +1,71 @@
-import React, { useState } from 'react';
-// import './style.css';
+import React from 'react';
+import { Grid, Card, CardContent, makeStyles, TextField, Typography, Button} from '@material-ui/core';
 
-// Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../utils/helpers';
+const useStyles = makeStyles({
+  field: {
+      marginRight: 20,
+  }
+});
 
 function Form() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
-  const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const classes = useStyles();
 
-    // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'userName') {
-      setUserName(inputValue);
-    } else {
-      setPassword(inputValue);
-    }
-  };
+    return (
+    <>
+        <Card style={{ maxWidth:500, margin:"0 auto" }}>
+            <CardContent>
+                <form>
+                <Grid container spacing={1}>
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+                    <Grid xs={12} sm={6} item>
+                        <TextField
+                            className = {classes.field}
+                            label="User Name"
+                            placeholder="Enter your username."
+                            variant="outlined"
+                            required
+                            fullWidth
+                        />
+                    </Grid>
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
+                    <Grid xs={12} sm={6} item>
+                        <TextField
+                            className = {classes.field}
+                            label="Email"
+                            type="email"
+                            placeholder="Enter your email."
+                            variant="outlined"
+                            required
+                            fullWidth
+                        />
+                    </Grid>
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
-    setEmail('');
-  };
+                    <Grid xs={12} sm={12} item>
+                        <TextField
+                            className = {classes.field}
+                            label="Message"
+                            placeholder="What's on your mind?"
+                            variant="outlined"
+                            required
+                            multiline
+                            rows={4}
+                            fullWidth
+                        />
+                    </Grid>
 
-  return (
-    <div>
-      <form className="form">
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          value={userName}
-          name="userName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="username"
-        />
-        <input
-          value={password}
-          name="password"
-          onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
-      </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
-    </div>
+                    <Grid xs={12} sm={12} item>
+                        <Button type="submit" variant="contained" color="primary">Submit</Button>
+                    </Grid>
+
+                </Grid>
+
+                <Typography variant="body2">*All fields are required.</Typography>
+                </form>
+
+            </CardContent>
+        </Card>
+    </>
   );
 }
 
