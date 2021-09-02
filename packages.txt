@@ -6,7 +6,7 @@ npm i bcrypt
 
 npm i jsonwebtoken
 
-?npmi axios? 
+npm i axios
 in src/app.js ======>
 //////////////////////////////////////////
 //  import axios from "axios"; // 
