@@ -1,6 +1,12 @@
+const db = require("../models");
+const sequelize = require("../config/connection");
+
+console.log(db);
+console.log(sequelize);
+
 const seedDb = async ()=>{
     await sequelize.sync({force: true});
-    await db.Owner.bulkCreate([
+    await db.Player.bulkCreate([
         {
             playerName:"Sean Mannion",
             team: `Seattle Seahawks`,
@@ -19,7 +25,7 @@ const seedDb = async ()=>{
             height:`6'3"`,
             weight:`221`,
             college:`West Virgina`,
-    
+
         },
         {
             
@@ -5226,4 +5232,8 @@ const seedDb = async ()=>{
                 college:`Missouri`,
             },
             
-    ])};
+    ])
+process.exit(0);
+}
+
+    seedDb();
