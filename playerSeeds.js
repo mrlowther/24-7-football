@@ -19,7 +19,7 @@ const seedDb = async ()=>{
             height:`6'3"`,
             weight:`221`,
             college:`West Virgina`,
-    
+
         },
         {
             
