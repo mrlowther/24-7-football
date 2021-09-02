@@ -10,7 +10,7 @@ Acknowledging the NFL's lack of kid-friendly web content and its need to keep it
 
 ## What did we learn?
 
-We learned that NFL APIs are difficult to access.  Our assumption is that NFL APIs are protected and expensive because betting on the NFL is such an enormous industry.   An estimated $100 billion was wagered at licensed sportsbooks during the 2019 NFL season, with billions wagered on the Super Bowl LV alone in the US.  The information and statistics accessible through APIs create a potential edge for the bettor, giving the information a definitive monetary value.  
+We learned that NFL APIs are difficult to access.  We concluded that NFL APIs are protected and expensive because betting on the NFL is such an enormous industry.   An estimated $100 billion was wagered at licensed sportsbooks during the 2019 NFL season, with billions wagered on the Super Bowl LV alone in the US.  The information and statistics accessible through APIs create a potential edge for the bettor, giving the information a definitive monetary value.  
 
 We also learned that linking the different technologies taught in our bootcamp course can be challenging and time consuming.  
 
