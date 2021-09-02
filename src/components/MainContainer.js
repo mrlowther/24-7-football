@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 
 import { Typography } from '@material-ui/core';
-import logo from './247FBK-Banner.jpg';
+import logo from './247FBK-Banner-Anim.gif';
 
 export default function MainContainer() {
 
