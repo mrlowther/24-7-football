@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 3001;
-const {User} = require("./models")
+const {User} = require("./models");
+const {Player} = require("./models");
 const allRoutes = require('./controllers');
 // const tokenAuth = require('./middleware/tokenAuth');
 

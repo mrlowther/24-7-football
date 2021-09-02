@@ -14,7 +14,7 @@ const seedDb = async ()=>{
             position:`QB`,
             height:`6'6"`,
             weight:`233`,
-            college:`Oregon State`,
+            college:`Oregon State`
     
         },
         {

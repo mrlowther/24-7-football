@@ -135,10 +135,10 @@ router.get("/profile", tokenAuth, (req, res)=>{
             id: req.user.id
         }
     }).then(userData=>{
-        res.json(userData);
+        return res.json(userData);
     }).catch(err=>{
         console.log(err);
-        res.status(500).json({
+        return res.status(500).json({
             message: "Error!", 
             error: err
         });
