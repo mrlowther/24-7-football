@@ -4,7 +4,8 @@ import { Paper, Tabs, Tab }  from '@material-ui/core';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
-// import Signup from './pages/Signup';
+import Login from './Login';
+import Register from './Register';
 import About from './About';
 import Contact from './Contact';
 
