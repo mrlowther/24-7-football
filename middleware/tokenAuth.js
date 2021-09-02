@@ -8,7 +8,7 @@ const tokenAuth = (req, res, next)=>{
         jwt.verify(token, process.env.JWT_SECRET,(err, data)=>{
             if(err) {
                 console.log(err);
-                return res.status(403).json({message: "Authourization Failed"});
+                return res.status(403).json({message: "Authorization Failed"});
             } else {
                 console.log(data);
                 req.user = data;
