@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form';
+import ContactForm from './ContactForm';
 import Typography from '@material-ui/core/Typography';
 
 export default function Contact() {
@@ -8,7 +8,7 @@ export default function Contact() {
 
       <Typography variant="h3">Contact Us</Typography>
       
-      <Form />
+      <ContactForm />
 
       </>
     );
