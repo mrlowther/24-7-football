@@ -25,4 +25,3 @@ const tokenAuth = (req, res, next)=>{
 
 module.exports = tokenAuth;
 
-// return res.send("welcome to the secret club");
