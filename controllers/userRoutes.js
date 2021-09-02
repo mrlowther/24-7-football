@@ -3,6 +3,7 @@ const router = express.Router();
 const {User} = require('../models');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const tokenAuth = require('../middleware/tokenAuth');
 // const tokenAuth = require('../middleware/tokenAuth');
 
 
@@ -77,31 +78,36 @@ router.get('/users', (req, res)=>{
     
 })
 
-// router.get("/secretclub", tokenAuth, (req, res)=>{
-router.get("/secretclub", (req, res)=>{
-    // res.json(req.user);
-    if (req.headers.authorization) {
-        console.log("auth header");
-        console.log(req.headers);
-        const token = req.headers.authorization.split(" ")[1];
-        console.log("token");
-        console.log(token);
-        console.log("jwt secrret");
-        console.log(process.env.JWT_SECRET);
-        jwt.verify(token, process.env.JWT_SECRET,(err, data)=>{
-            if(err) {
-                console.log(err);
-                return res.status(403).json({message: "Authourization Failed"});
-            } else {
-                console.log(data);
-                return res.send("welcome to the secret club");
-            }
-        })
-    } 
-    else {
-        return res.status(403).json({message: "No Token"});
-    }
+router.get("/secretclub", tokenAuth, (req, res)=>{
+    res.json(req.user);
 })
+
+// router.get("/secretclub", (req, res)=>{
+    // res.json(req.user);
+////////  BEFORE MIDDLEWARE AND AUTHTOKEN  WORKING     ///////////////
+// router.get("/secretclub", tokenAuth, (req, res)=>{
+//     if (req.headers.authorization) {
+//         console.log("auth header");
+//         console.log(req.headers);
+//         const token = req.headers.authorization.split(" ")[1];
+//         console.log("token");
+//         console.log(token);
+//         console.log("jwt secrret");
+//         console.log(process.env.JWT_SECRET);
+//         jwt.verify(token, process.env.JWT_SECRET,(err, data)=>{
+//             if(err) {
+//                 console.log(err);
+//                 return res.status(403).json({message: "Authourization Failed"});
+//             } else {
+//                 console.log(data);
+//                 return res.send("welcome to the secret club");
+//             }
+//         })
+//     } 
+//     else {
+//         return res.status(403).json({message: "No Token"});
+//     }
+// })
     // res.send("welcome to the secret club");
     // if (req.headers.authorization) {
     //     console.log("auth header");
@@ -123,20 +129,20 @@ router.get("/secretclub", (req, res)=>{
     // }
 
 
-// router.get("/profile", tokenAuth, (req, res)=>{
-//     User.findOne({
-//         where:{
-//             id: req.user.id
-//         }
-//     }).then(userData=>{
-//         res.json(userData);
-//     }).catch(err=>{
-//         console.log(err);
-//         res.status(500).json({
-//             message: "Error!", 
-//             error: err
-//         });
-//     });
-// })
+router.get("/profile", tokenAuth, (req, res)=>{
+    User.findOne({
+        where:{
+            id: req.user.id
+        }
+    }).then(userData=>{
+        res.json(userData);
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json({
+            message: "Error!", 
+            error: err
+        });
+    });
+})
 
 module.exports = router;
