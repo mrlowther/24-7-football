@@ -2,7 +2,7 @@
 
 ## Motivation
 
-24/7 Football for Kids is a fun, iteractive application, providing kids an opportunity to search for their favorite fantasy football stars.  By first clicking on the team name, then the player name, a custom player card with image, name, team, position, height, weight, and college populates.  It is like having digital football cards for all of your favorite fantasy football players at your fingertips.
+24/7 Football for Kids is a fun, interactive application, providing kids an opportunity to search for their favorite fantasy football stars.  By first clicking on the team name, then the player name, a custom player card with image, name, team, position, height, weight, and college populates.  It is like having digital football cards for all of your favorite fantasy football players at your fingertips.
 
 We were motivated to build 24/7 Football for Kids by a number of reasons.  Our market research showed that there are very few accessible sites and applications for kids who are just getting into football.  Sites like pro football focus (PFF), NFL.com, footballoutsiders.com, and fansided.com provide varied material and insight into the NFL.  However, they are geared towards seasoned fantasy football managers, gamblers, and statheads.  Additionally, it is well-documented that the NFL has a heightened concern regarding the potential drop in youth involvement in football due to concussion research and subsequent fear of allowing childern to play football.  
 
