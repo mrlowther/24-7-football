@@ -25,7 +25,7 @@ Finally, we have learned that through intentional communication and recap, many 
 
 ## Installation
 
-Installing 24-7 Football for Kids requires steps.
+
 
 1.  from the command line, run "NPM install"
 2.  run "NPM start"
