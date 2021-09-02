@@ -6,7 +6,7 @@
 
 We were motivated to build 24/7 Football for Kids by a number of reasons.  Our market research showed that there are very few accessible sites and applications for kids who are just getting into football.  Sites like pro football focus (PFF), NFL.com, footballoutsiders.com, and fansided.com provide varied material and insight into the NFL.  However, they are geared towards seasoned fantasy football managers, gamblers, and statheads.  Additionally, it is well-documented that the NFL has a heightened concern regarding the potential drop in youth involvement in football due to concussion research and subsequent fear of allowing childern to play football.  
 
-Acknowledging the NFL's lack of kid-friendly web content and its need to keep its pipeline of fans and players alike, we set out to build a fun, interactive application for kids to introduce themselves to the NFL and its players.  24-7 Football for Kids is an opportunity for your child to find their favorite player card in two clicks.
+Acknowledging the NFL's lack of kid-friendly web content and its need to keep its pipeline of fans and players open and healthy, we set out to build a fun, interactive application for kids to introduce themselves to the NFL and its players.  24-7 Football for Kids is an opportunity for your child to find their favorite player card in two clicks.
 
 ## What did we learn?
 
