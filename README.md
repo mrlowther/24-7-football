@@ -21,7 +21,8 @@ Finally, we have learned that through intentional communication and recap, many 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#License)
+- [License](#license)
+- [LInks](#links)
 
 ## Installation
 
@@ -57,6 +58,11 @@ Lewis Capers - https://github.com/LewisCapers206
 ## License
 
 Licensed under the [MIT License](LICENSE)
+
+## Links
+
+Link to 24/7 Football for Kids at https://rg-247fbk.herokuapp.com/
+Link to 24/7 Football for Kids walkthrough video at 
 
 
 
