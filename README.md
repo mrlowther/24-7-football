@@ -45,9 +45,13 @@ Installing 24-7 Football for Kids requires steps.
 ## Credits - Collaborators
 
 Ran Gamboa - https://github.com/rangamboa
+
 Tino Ganacias - https://github.com/tinoganacias
+
 Darren Thamtoro - https://github.com/darrenthamtoro
+
 Michael Lowther - https://github.com/mrlowther
+
 Lewis Capers - https://github.com/LewisCapers206
 
 ## License
