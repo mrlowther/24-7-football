@@ -80,6 +80,7 @@ export default function Cards() {
                 <img src={logo7} className="teamLogo" alt="" />
                 </Paper>
             </Grid>
+            
             <Grid item xs={12} sm={6} md={4} lg={3}>
                 <Paper>
                 <Typography variant="h5" align="center">Miami Dolphins</Typography>
