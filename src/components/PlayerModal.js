@@ -12,9 +12,10 @@ import Dialog from '@material-ui/core/Dialog';
 import PersonIcon from '@material-ui/icons/Person';
 import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
-import PlayerModal from './PlayerModal';
 
-const players = ['player 1','player 2','player 3','player 4','player 5','player 6','player 7','player 8'];
+import logoCowboys from './images/team-logos/logo-cowboys.png';
+
+const emails = ['name','position','number','college'];
 
 const useStyles = makeStyles({
   avatar: {
@@ -36,22 +37,24 @@ function SimpleDialog(props) {
   };
 
   return (
+    <div>
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
       <DialogTitle id="simple-dialog-title" className="dialogTitle">Team Roster</DialogTitle>
       <List>
-        {players.map((player) => (
-          <ListItem button onClick={() => handleListItemClick(player)} key={player}>
+        {emails.map((email) => (
+          <ListItem button onClick={() => handleListItemClick(email)} key={email}>
             <ListItemAvatar>
               <Avatar className={classes.avatar}>
                 <PersonIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={player} />
+            <ListItemText primary={email} />
           </ListItem>
         ))}
       </List>
-      <PlayerModal></PlayerModal>
+      <img src={logoCowboys} />
     </Dialog>
+    </div>
   );
 }
 
@@ -63,7 +66,7 @@ SimpleDialog.propTypes = {
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(players[1]);
+  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -77,11 +80,11 @@ export default function SimpleDialogDemo() {
   return (
     <div>
       {/* <Typography variant="subtitle1">Selected: {selectedValue}</Typography> */}
-      <center>
+
+      <br />
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        click to choose
+        Open simple dialog
       </Button>
-      </center>
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
   );

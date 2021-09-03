@@ -4,8 +4,8 @@ import { Paper, Tabs, Tab }  from '@material-ui/core';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
-import Login from './Login';
-import Signup from './Signup';
+// import Login from './Login';
+// import Signup from './Signup';
 import About from './About';
 import Contact from './Contact';
 
@@ -36,7 +36,7 @@ export default function CenteredTabs() {
                     to={routes[0]}
                 />
                 <Tab
-                    label="Player Search"
+                    label="Search"
                     value={routes[1]}
                     component={Link}
                     to={routes[1]}
@@ -71,8 +71,8 @@ export default function CenteredTabs() {
 
         <Route exact path="/" component={Home} />
         <Route path="/search" component={Search} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
+        {/* <Route path="/login" component={Login} /> */}
+        {/* <Route path="/signup" component={Signup} /> */}
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
 
