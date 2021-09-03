@@ -3,8 +3,9 @@
  import { Redirect } from 'react-router-dom'
  import Form from "react-validation/build/form";
  import Input from "react-validation/build/input";
- import CheckButton from "react-validation/build/button"
+ import CheckButton from "react-validation/build/button";
  import { login } from "../actions/auth"
+
  const required = (value) => {
      if (!value) {
          return (
@@ -14,6 +15,7 @@
          );
      }
  }
+
  const Login = (props) => {
      const form = useRef();
      const checkBtn = useRef()
