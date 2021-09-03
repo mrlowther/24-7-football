@@ -417,7 +417,7 @@ export default function Search() {
 
             <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Paper>
-                <Typography variant="h5" align="center">Los&nbsp;Angeles<br/>TChargers</Typography>
+                <Typography variant="h5" align="center">Los&nbsp;Angeles<br/>Chargers</Typography>
                 <img src={logoChargers} className="teamLogo" alt="" />
                 </Paper>
             </Grid>
