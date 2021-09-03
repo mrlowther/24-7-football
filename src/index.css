@@ -55,3 +55,8 @@ button {
     background-color :rgb(21,35,72);
     color: white;
 }
+
+.cardPhoto {
+    height: 50%;
+    width: 50%;
+}

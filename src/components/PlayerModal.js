@@ -52,7 +52,7 @@ function SimpleDialog(props) {
           </ListItem>
         ))}
       </List>
-      <img src={logoCowboys} />
+      <img src={logoCowboys} className="cardPhoto" alignItems="center" />
     </Dialog>
     </div>
   );
