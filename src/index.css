@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: rgb(21,35,72);
 }
 
 h2 {
@@ -11,8 +11,13 @@ h3 {
     padding: 20px 10px 10px 10px;
 }
 
+h4 {
+    text-align: center;
+}
+
 h5 {
     padding: 20px;
+    text-align:center;
 }
 
 h6 {
@@ -24,7 +29,13 @@ p {
 }
 
 .teamLogo {
+    height: 95%;
+    width: 95%;
+    max-height: 300px;
+    padding:10px;
+}
 
+.confLogo {
     height: 95%;
     width: 95%;
     padding:10px;

@@ -4,8 +4,8 @@ import { Paper, Tabs, Tab }  from '@material-ui/core';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
-import Login from './Login';
-import Register from './Register';
+// import Login from './Login';
+// import Register from './Register';
 import About from './About';
 import Contact from './Contact';
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 
 export default function CenteredTabs() {
   const classes = useStyles();
-  const routes = ['/', '/search', '/signup', '/about', '/contact'];
+  const routes = ['/', '/search', '/login', '/signup', '/about', '/contact'];
 
   return (
     <>
@@ -42,22 +42,28 @@ export default function CenteredTabs() {
                     to={routes[1]}
                 />
                 <Tab
-                    label="Log In/Sign Up"
+                    label="Log In"
                     value={routes[2]}
                     component={Link}
                     to={routes[2]}
                 />
                 <Tab
-                    label="About 247FBK"
+                    label="Sign Up"
                     value={routes[3]}
                     component={Link}
                     to={routes[3]}
                 />
                 <Tab
-                    label="Contact Us"
+                    label="About 247FBK"
                     value={routes[4]}
                     component={Link}
                     to={routes[4]}
+                />
+                <Tab
+                    label="Contact Us"
+                    value={routes[5]}
+                    component={Link}
+                    to={routes[5]}
                 />
             </Tabs>
         )}
@@ -65,6 +71,7 @@ export default function CenteredTabs() {
 
         <Route exact path="/" component={Home} />
         <Route path="/search" component={Search} />
+        {/* <Route path="/login" component={Login} /> */}
         {/* <Route path="/signup" component={Signup} /> */}
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
