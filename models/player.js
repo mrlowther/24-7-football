@@ -16,7 +16,7 @@ Player.init(
       
     },
     number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
      
       
     },
@@ -28,7 +28,7 @@ Player.init(
       type: DataTypes.STRING,
     },
     weight: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
     college: {
         type: DataTypes.STRING,
