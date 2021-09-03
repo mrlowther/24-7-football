@@ -7,11 +7,7 @@ const useStyles = makeStyles({
   }
 });
 
-<<<<<<< HEAD
-function Form() {
-=======
 function ContactForm() {
->>>>>>> develop
 
     const classes = useStyles();
 
@@ -73,8 +69,4 @@ function ContactForm() {
   );
 }
 
-<<<<<<< HEAD
-export default Form;
-=======
 export default ContactForm;
->>>>>>> develop
