@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function Search() {
 
   const classes = useStyles();
@@ -426,9 +427,9 @@ export default function Search() {
 
         </Grid>
 
-      </Grid>     
-      
+      </Grid>      
 
     </div>
+
   );
 }

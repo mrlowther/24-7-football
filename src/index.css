@@ -40,3 +40,13 @@ p {
     width: 95%;
     padding:10px;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
