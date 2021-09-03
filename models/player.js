@@ -34,6 +34,9 @@ Player.init(
         type: DataTypes.STRING,
 
       },
+     photo: {
+        type: DataTypes.TEXT,
+      },
   },
  
     {
