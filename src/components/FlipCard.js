@@ -30,15 +30,6 @@ function FlipCard({ card }) {
         </div>
         <div className="card back">
           <div className="card-body d-flex justify-content-center align-items-center">
-              <div>
-                <p>Position:</p>
-                <p>Height:</p>
-                <p>Weight:</p>
-                <p>College:</p>
-                <p>Combine 40 time:</p>
-                <p>nfl.com link:</p>
-                <p>espn.com link:</p>
-              </div>
           </div>
         </div>
       </div>
