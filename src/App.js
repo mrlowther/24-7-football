@@ -1,8 +1,9 @@
+import { classes } from "istanbul-lib-coverage";
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import React from "react";
 
 import MainContainer from "./components/MainContainer";
-
-
 
 const App = () => <MainContainer />;
 

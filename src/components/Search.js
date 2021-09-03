@@ -51,6 +51,141 @@ import logoChiefs from './images/team-logos/logo-chiefs.png';
 import logoRaiders from './images/team-logos/logo-raiders.png';
 import logoChargers from './images/team-logos/logo-chargers.png';
 
+const prefix = './images/team-logos/logo-';
+
+const teams = [
+  {
+    name: 'Dallas Cowboys',
+    logo: '../images/team-logos/logo-cowboys.png',
+    id: 1,
+  },
+  {
+    name: 'New York Giants',
+    logo: '../images/team-logos/logo-giants.gif',
+    id: 2,
+  },
+  {
+    name: 'Philadelphia Eagles',
+    id: 3,
+  },
+  {
+    name: 'Washington Football Team',
+    id: 4,
+  },
+  {
+    name: 'Chicago Bears',
+    id: 5,
+  },
+  {
+    name: 'Detroit Lions',
+    id: 6,
+  },
+  {
+    name: 'Green Bay Packers',
+    id: 7,
+  },
+  {
+    name: 'Minnesota Vikings',
+    id: 8,
+  },
+  {
+    name: 'Atlanta Falcons',
+    id: 9,
+  },
+  {
+    name: 'Carolina Panthers',
+    id: 10,
+  },
+  {
+    name: 'New Orleans Saints',
+    id: 11,
+  },
+  {
+    name: 'Tampa Bay Buccaneers',
+    id: 12,
+  },
+  {
+    name: 'Arizona Cardinals',
+    id: 13,
+  },
+  {
+    name: 'Los Angeles Rams',
+    id: 14,
+  },
+  {
+    name: 'San Francisco 49ers',
+    id: 15,
+  },
+  {
+    name: 'Seattle Seahawks',
+    id: 16,
+  },
+  {
+    name: 'Buffalo Bills',
+    id: 17,
+  },
+  {
+    name: 'Miami Dolphins',
+    id: 18,
+  },
+  {
+    name: 'New England Patriots',
+    id: 19,
+  },
+  {
+    name: 'New York Jets',
+    id: 20,
+  },
+  {
+    name: 'Baltimore Ravens',
+    id: 21,
+  },
+  {
+    name: 'Cincinnati Bengals',
+    id: 22,
+  },
+  {
+    name: 'Cleveland Browns',
+    id: 23,
+  },
+  {
+    name: 'Pittsburgh Steelers',
+    id: 24,
+  },
+  {
+    name: 'Houston Texans',
+    id: 25,
+  },
+  {
+    name: 'Indianapolis Colts',
+    id: 26,
+  },
+  {
+    name: 'Jacksonville Jaguars',
+    id: 27,
+  },
+  {
+    name: 'Tennessee Titans',
+    id: 28,
+  },
+  {
+    name: 'Denver Broncos',
+    id: 29,
+  },
+  {
+    name: 'Kansas City Chiefs',
+    id: 30,
+  },
+  {
+    name: 'Las Vegas Raiders',
+    id: 31,
+  },
+  {
+    name: 'Los Angeles Chargers',
+    id: 32,
+  },
+];
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -62,6 +197,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function renderTeams(props) {
+  const logoList = props.teams;
+  const listItems = teams.map((team) =>
+    <li key={team.toString()}>
+      {team}
+    </li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
 
 export default function Search() {
 
@@ -85,6 +231,15 @@ export default function Search() {
         <Grid item xs={12} sm={12} md={9} lg={9}>
 
           <Grid container spacing={1} alignItems="flex-start">
+           {/* {teams.map((team) => ( 
+            <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Paper>
+                <TeamModal alignItems="center"></TeamModal>
+                <Typography variant="h5" align="center">{team.name}</Typography>
+                <img src="{team.logo}" className="teamLogo" alt="" />
+              </Paper>
+            </Grid>
+            ))} */}
 
             <Grid item xs={12} sm={6} md={3} lg={3}>
                 <Paper>

@@ -10,6 +10,9 @@ export default function Contact() {
       
       <ContactForm />
 
-      </>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    </>
     );
 }

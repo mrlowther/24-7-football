@@ -10,12 +10,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
 import PersonIcon from '@material-ui/icons/Person';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import { blue } from '@material-ui/core/colors';
 
 import logoCowboys from './images/team-logos/logo-cowboys.png';
 
-const emails = ['name','position','number','college'];
+const stats = ['name','position','number','height','weight','college','photo'];
 
 const useStyles = makeStyles({
   avatar: {
@@ -39,20 +39,34 @@ function SimpleDialog(props) {
   return (
     <div>
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title" className="dialogTitle">Team Roster</DialogTitle>
-      <List>
-        {emails.map((email) => (
-          <ListItem button onClick={() => handleListItemClick(email)} key={email}>
-            <ListItemAvatar>
-              <Avatar className={classes.avatar}>
-                <PersonIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary={email} />
-          </ListItem>
-        ))}
-      </List>
-      <img src={logoCowboys} />
+
+      <DialogTitle id="simple-dialog-title" className="dialogTitle">
+        Player Stats
+      </DialogTitle>
+
+      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
+
+        <Grid item xs={12} sm={12} md={4} lg={4}>
+          <List>
+            {stats.map((stat) => (
+            <ListItem button onClick={() => handleListItemClick(stat)} key={stat}>
+              <ListItemAvatar>
+                <Avatar className={classes.avatar}>
+                  <PersonIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={stat} />
+            </ListItem>
+            ))}
+          </List>
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={8} lg={8}>
+          <img src={logoCowboys} className="cardPhoto" alt="x" alignItems="center" />
+        </Grid>
+    
+      </Grid>
+
     </Dialog>
     </div>
   );
@@ -66,7 +80,7 @@ SimpleDialog.propTypes = {
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+  const [selectedValue, setSelectedValue] = React.useState(stats[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -82,9 +96,11 @@ export default function SimpleDialogDemo() {
       {/* <Typography variant="subtitle1">Selected: {selectedValue}</Typography> */}
 
       <br />
+      <center>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open simple dialog
+        View Stats
       </Button>
+      </center>
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
   );
