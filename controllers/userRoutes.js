@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User} = require('../models');
+const {User, Player} = require('../models');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const tokenAuth = require('../middleware/tokenAuth');
@@ -12,8 +12,17 @@ router.post("/signup", (req, res)=>{
         name: req.body.name,
         password: req.body.password,
         email: req.body.email
-    }).then(userData=>{
-        res.json(userData);
+    }).then(newUser=>{
+        const token = jwt.sign({
+            name: newUser.name,
+            email: newUser.email,
+            id: newUser.id
+        }, 
+        process.env.JWT_SECRET,
+        {
+            expiresIn:"2h"
+        })
+        res.json({token, user: newUser, message: "Logged In!!"});
     }).catch(err=>{
         console.log(err);
         res.status(500).json({
@@ -28,26 +37,26 @@ router.post("/login", (req, res)=>{
         where: {
             email: req.body.email,
         }   
-    }).then(userData=>{
-        if(!userData) {
+    }).then(user=>{
+        if(!user) {
             res.status(403).json({
                 message:"Invalid username or password."
             });
-        } else if (!bcrypt.compareSync(req.body.password,userData.password)) {
+        } else if (!bcrypt.compareSync(req.body.password,user.password)) {
                 res.status(403).json({
                     message:"Invalid username or password."
                 });
         } else {
             const token = jwt.sign({
-                name: userData.name,
-                email: userData.email,
-                id: userData.id
+                name: user.name,
+                email: user.email,
+                id: user.id
             }, 
             process.env.JWT_SECRET,
             {
                 expiresIn:"2h"
             })
-            res.json({token, userData, message: "Logged In!!"});
+            res.json({token, user, message: "Logged In!!"});
             }
     }).catch(err=>{
         console.log(err);
@@ -133,7 +142,8 @@ router.get("/profile", tokenAuth, (req, res)=>{
     User.findOne({
         where:{
             id: req.user.id
-        }
+        },
+        // include: [model: Player]
     }).then(userData=>{
         return res.json(userData);
     }).catch(err=>{
