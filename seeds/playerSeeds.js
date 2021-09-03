@@ -7,16 +7,7 @@ console.log(sequelize);
 const seedDb = async ()=>{
     await sequelize.sync({force: true});
     await db.Player.bulkCreate([
-        {
-            playerName:"Sean Mannion",
-            team: `Seattle Seahawks`,
-            number:`9`,
-            position:`QB`,
-            height:`6'6`,
-            weight:`233`,
-            college:`Oregon State`
-    
-        },
+ 
         {
             playerName:`Geno Smith`,
             team: `Seattle Seahawks`,
@@ -25,6 +16,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`221`,
             college:`West Virgina`,
+            photo:`https://th.bing.com/th/id/OIP.JR3VQhT1Nd1gGJ2jNOozawHaE8?pid=ImgDet&rs=1`
 
         },
         {
@@ -36,6 +28,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`215`,
             college:`Wisconsin`,
+            photo:`https://th.bing.com/th/id/OIP.V8eUL_FnAzLBcLqr8gKYdwHaE_?w=279&h=187&c=7&r=0&o=5&dpr=1.25&pid=1.7`
     
         },
         {
@@ -46,7 +39,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`222`,
             college:`Oklahoma State`,
-    
+            photo:`https://pistolsfiringblog.com/wp-content/uploads/2018/09/USATSI_11307660_154512258_lowres.jpg`
         },
         {
             playerName:`Alex Collins`,
@@ -56,6 +49,7 @@ const seedDb = async ()=>{
             height:`5'10'`,
             weight:`210`,
             college:`Alex Collins`,
+            photo:`https://thumb.spokesman.com/xpyD5J1iO_GSOUoXLR_e7viVYmA=/720x0/smart/media.spokesman.com/photos/2021/08/30/612d5f3d90610.hires.jpg`
     
         },
         {
@@ -66,6 +60,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`214`,
             college:`Miami(FL)`,
+            photo:`https://heavy.com/wp-content/uploads/2020/05/GettyImages-461308144-e1589928538859.jpg?quality=65&strip=all&w=780`
     
         },
         {
@@ -76,6 +71,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`202`,
             college:`Miami(FL)`,
+            photo:`https://images.saymedia-content.com/.image/MTY5NDYzNDM2NTE2Nzk1ODY3/usatsi_13852242.jpg`
     
         },
         {
@@ -86,6 +82,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`220`,
             college:`SanDiego State`,
+            photo:`https://cdn.vox-cdn.com/thumbor/JJjB-cIQ-nbC1JtLyvb8nN4K05c=/0x0:3694x2854/1200x800/filters:focal(1589x700:2179x1290)/cdn.vox-cdn.com/uploads/chorus_image/image/60845119/1014750560.jpg.0.jpg`
     
         },
         {
@@ -96,6 +93,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`250`,
             college:`Central Michigan`,
+            photo:`https://th.bing.com/th/id/OIP.mZA8cfoMrIVkqASm-6tLwQHaEc?pid=ImgDet&rs=1`
     
         },
         {
@@ -106,6 +104,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`190`,
             college:`Western Michigan`,
+            photo:`https://cdn.vox-cdn.com/thumbor/-6Z6rJnl98VGT6Rb4Ekh6FK-6OY=/0x0:3820x2000/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22812664/usa_today_16647303.jpg`
     
         },
         {
@@ -116,6 +115,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`182`,
             college:`Kansas State`,
+            photo:`https://i.pinimg.com/originals/33/2c/20/332c20396eb40e98ec895348b4c838e4.jpg`
     
         },
         {
@@ -126,6 +126,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`235`,
             college:`Ole Miss`,
+            photo:`https://s.yimg.com/uu/api/res/1.2/beulB4xrh7bQ0vMltxtRGA--~B/aD0xNTc1O3c9MjgwMDtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/nbc_sports_northwest_40/c1d46f3a0b03ece14fe04145c1122d9b`
     
         },
         {
@@ -136,6 +137,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`199`,
             college:`Florida`,
+            photo:`https://th.bing.com/th/id/OIP.bJ7-xGtFh0A7XvRuiNZdPgHaE8?pid=ImgDet&rs=1`
     
         },
         {
@@ -146,6 +148,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`265`,
             college:`Washington`,
+            photo:`https://th.bing.com/th/id/OIP.sD3KHvnO8HZuW9DR9QsE9QHaEZ?pid=ImgDet&rs=1`
     
         },
         {
@@ -156,6 +159,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`240`,
             college:`South Alabama`,
+            photo:`https://nflplayersnews.com/wp-content/uploads/2021/04/x-16.png`
     
         },
         {
@@ -166,6 +170,7 @@ const seedDb = async ()=>{
             height:`6'7`,
             weight:`251`,
             college:`Stanford`,
+            photo:`https://static.seattletimes.com/wp-content/uploads/2020/11/11052020_1_144304-780x520.jpg`
     
         },
         
@@ -178,6 +183,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`190`,
             college:`Marist`,
+            photo:`https://th.bing.com/th/id/OIP.GtdKgEvAelmNNEgIaTSq8AHaE5?pid=ImgDet&rs=1`
     
         },
         {
@@ -188,6 +194,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`212`,
             college:`Texas`,
+            photo:`https://cardswire.usatoday.com/wp-content/uploads/sites/60/2021/06/USATSI_16231159-e1624409896253.jpg?w=1000&h=600&crop=1`
         },
         {
             playerName:`Kyler Murray`,
@@ -197,6 +204,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`207`,
             college:`Oklahoma`,
+            photo:`https://th.bing.com/th/id/R.fe0173e0ed888a07863dc7508632c50c?rik=fNUtrS1iNCg%2bJg&pid=ImgRaw&r=0`
         },
         {
             playerName:`Chris Streveler`,
@@ -206,6 +214,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`216`,
             college:`South Dakota`,
+            photo:`https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F0103%2Fr797420_1296x729_16-9.jpg`
         },
         {
             playerName:`Eno Benjamin`,
@@ -215,6 +224,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`207`,
             college:`Arizona State`,
+            photo:`https://th.bing.com/th/id/OIP.TvSyDU46jmWAoy2fms_hGgHaD4?pid=ImgDet&rs=1`
         },
         {
             playerName:`James Conner`,
@@ -224,6 +234,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`233`,
             college:`Pittsburgh`,
+            photo:`https://nyctastemakers.com/wp-content/uploads/2021/04/CFDC930F-033B-4E41-926A-1FEF27EEB1E8.jpeg`
         },
         {
             playerName:`Chase Edmonds`,
@@ -233,6 +244,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`210`,
             college:`Fordham`,
+            photo:`https://sportsnaut.com/wp-content/uploads/2019/10/USATSI_13473323_168386999_lowres.jpg`
         },
         {
             playerName:`Jonathan Ward`,
@@ -242,6 +254,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`202`,
             college:`Central Michigan`,
+            photo:`https://bloximages.newyork1.vip.townnews.com/daily-journal.com/content/tncms/assets/v3/editorial/8/2d/82d8b54a-4b17-11eb-b0b0-5b51d9d35597/5fed44dda87de.image.jpg?resize=1200%2C800`
         },
         {
             playerName:`AJ Green`,
@@ -251,6 +264,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`207`,
             college:`Georgia`,
+            photo:`https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/bengals/zi0lwwdqfji5e7nvuw8b`
         },
         {
             playerName:`DeAndre Hopkins`,
@@ -260,6 +274,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`212`,
             college:`Clemson`,
+            photo:`https://th.bing.com/th/id/OIP.hSV0bAuScYdB96Epv2Q2sAHaE8?pid=ImgDet&rs=1`
         },
         {
             playerName:`Andy Isabella`,
@@ -269,6 +284,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`188`,
             college:`Masschusetts`,
+            photo:`https://www.masslive.com/resizer/VoKRTz_033JEEyDyDt43ab9B_9Y=/1280x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/3PTZLEJHC5BTNIEL3WNE7IRI6E.jpg`
         },
         {
             playerName:`Christian Kirk`,
@@ -278,6 +294,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`200`,
             college:`Texas A&M`,
+            photo:`https://res.cloudinary.com/dan8wilpz/image/upload/e_auto_saturation/e_auto_brightness/e_sharpen:70/dpr_3.0/c_fill,g_xy_center,h_250,w_600/fast/article-558/christian-kirk-arizona-cardinals.jpg`
         },
         {
             playerName:`Rondale Moore`,
@@ -287,6 +304,7 @@ const seedDb = async ()=>{
             height:`5'7`,
             weight:`180`,
             college:`Purdue`,
+            photo:`https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAKEjH1.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg&x=1915&y=792`
         },
         {
             playerName:`Antoine Wesley`,
@@ -296,6 +314,8 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`206`,
             college:`Texas Tech`,
+            photo:`https://preview.redd.it/oohvy1uwtyk71.jpg?width=960&crop=smart&auto=webp&s=af4065f206886c0c61ea476a0b22f218d616ca93`
+
         },
         {
             playerName:`Darrell Daniels`,
@@ -305,6 +325,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`256`,
             college:`Washington`,
+            photo:`https://www.gannett-cdn.com/presto/2019/08/12/PPHX/dcba9028-266a-4076-a20f-b3e701e912c5-uscp-76mhudfepg8id5z6bxe_original.jpg?width=680&height=510&fit=bounds&auto=webp`
         },
         {
             playerName:`Demetrius Harris`,
@@ -314,6 +335,7 @@ const seedDb = async ()=>{
             height:`6'7`,
             weight:`230`,
             college:`Milwaukee`,
+            photo:`https://th.bing.com/th/id/R.dcfde30ee9786c435c37341ea655f745?rik=Ie9Enxdl167hig&riu=http%3a%2f%2fb.fssta.com%2fuploads%2fcontent%2fdam%2ffsdigital%2ffscom%2fnfl%2fimages%2f2015%2f08%2f30%2fNEWSLETTER%2fKansas-City-Chiefs-tight-end-Demetrius-Harris.vresize.1200.630.high.0.jpg&ehk=jtzUbZ9KafM3QLWb2KM2eMstt0bxG0U7QKQlzWx48lw%3d&risl=&pid=ImgRaw&r=0`
         },
         {
             playerName:`Bruno Labelle`,
@@ -323,6 +345,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`247`,
             college:`Cincinnati`,
+            photo:`https://a.espncdn.com/combiner/i?img=/i/headshots/college-football/players/full/4037485.png`
         },
         {
             playerName:`Maxx Williams`,
@@ -332,6 +355,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`252`,
             college:`Minnesota`,
+            photo:`https://th.bing.com/th/id/R.2a8213accac33135cf905083152b65e7?rik=Ozr3c5pLr2oOiA&riu=http%3a%2f%2fcdn.chatsports.com%2fthumbnails%2f309-3824-original.jpeg&ehk=CklccvZq%2fH4D65eDwkzOlf%2bqNM8DZeARsK0xlBBrm10%3d&risl=&pid=ImgRaw&r=0`
         },
         {
             playerName:`Matt Prater`,
@@ -341,6 +365,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`201`,
             college:`UCF`,
+            photo:`https://denver.cbslocal.com/wp-content/uploads/sites/15909806/2011/08/matt-prater.jpg?w=640&h=480&crop=1`
         },
         {
             playerName:`Bryce Perkins`,
@@ -350,6 +375,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`214`,
             college:`Virginia`,
+            photo:`https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/rams/ttrkgmuttuavckmswebn`
         },
         {
             playerName:`Matthew Stafford`,
@@ -359,6 +385,8 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`220`,
             college:`Georgia`,
+            photo:`https://s.yimg.com/ny/api/res/1.2/NBl1P9WxohNZRkbs0RyaNQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTQ3MA--/https://s.yimg.com/uu/api/res/1.2/7YCnS6Q9ayKuusftpDHWlA--~B/aD01NjA7dz04NDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/la_times_articles_853/e2b597c0f8a69e5fb4bca8dce4dc6d7b`
+
         },
         {
             playerName:`John Wofford`,
@@ -368,6 +396,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`200`,
             college:`Wake Forest`,
+            photo:`https://th.bing.com/th/id/OIP.u-GyGyRO4OjDZbbfK74qyQHaEK?pid=ImgDet&rs=1`
         },
         {
             playerName:`Cam Akers`,
@@ -377,6 +406,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`217`,
             college:`Florida State`,
+            photo:`https://s.yimg.com/ny/api/res/1.2/pEW8cJ4XE3u489KZbC1WxA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMTIz/https://s.yimg.com/uu/api/res/1.2/j4hYzIypG3IalN2p.shQZQ--~B/aD0xMTMyO3c9MjAxNjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/rotoworld.com/ce0b96d3b404451e52ef28c459c04bfd`
         },
         {
             playerName:`Raymond Calais`,
@@ -386,6 +416,7 @@ const seedDb = async ()=>{
             height:`5'8`,
             weight:`188`,
             college:`Louisiana-Lafayette`,
+            photo:`https://sportsnaut.com/wp-content/uploads/2021/08/16567367-750x422.jpg`
         },
         {
             playerName:`Jake Funk`,
@@ -395,16 +426,9 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`205`,
             college:`Maryland`,
+            photo:`https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/rams/o5bcdvdflppkyypcabep`
         },
-        {
-            playerName:``,
-            team: `Los Angeles Rams`,
-            number:``,
-            position:`RB`,
-            height:``,
-            weight:``,
-            college:``,
-        },
+
         {
             playerName:`Darrell Henderson`,
             team: `Los Angeles Rams`,
@@ -413,6 +437,7 @@ const seedDb = async ()=>{
             height:`5'8`,
             weight:`208`,
             college:`Memphis`,
+            photo:`https://mk0hoopballcomg7pn5f.kinstacdn.com/wp-content/uploads/2021/08/darrell-henderson-la-rams-nfl-football.jpg`
         },
         {
             playerName:`Xavier Jones`,
@@ -422,6 +447,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`208`,
             college:`SMU`,
+            photo:`https://th.bing.com/th/id/R.5185d173fd5de9d9db8653352a4ac37f?rik=k1z4ce3K%2fpNcqQ&pid=ImgRaw&r=0`
         },
         {
             playerName:`Sony Michel`,
@@ -431,6 +457,7 @@ const seedDb = async ()=>{
             height:`5'11`,
             weight:`215`,
             college:`Georgia`,
+            photo:`https://th.bing.com/th/id/OIF.FJtwIjc9ZxAwKmZXfuPQVw?pid=ImgDet&rs=1`
         },
         {
             playerName:`Tutu Atwell`,
@@ -440,6 +467,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`165`,
             college:`Louisville`,
+            photo:`https://th.bing.com/th/id/OIP.w709ccsPrYsxg8i0qfm2DwHaE8?pid=ImgDet&rs=1`
         },
         {
             playerName:`DeSean Jackson`,
@@ -449,6 +477,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`175`,
             college:`UC Berkeley`,
+            photo:`https://www.dailynews.com/wp-content/uploads/2021/06/AP21159777694140.jpg?w=863`
         },
         {
             playerName:`Van Jefferson`,
@@ -458,6 +487,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`200`,
             college:`Florida`,
+            photo:`https://ramblinfan.com/wp-content/uploads/imagn-images/2017/07/15000634.jpeg`
         },
         {
             playerName:`Cooper Kupp`,
@@ -467,6 +497,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`208`,
             college:`Eastern Washington`,
+            photo:`https://th.bing.com/th/id/R.bfd49b0cdaced2d5e11bdfc1acfb1833?rik=KWNlOI2qfK0oTw&pid=ImgRaw&r=0`
         },
         {
             playerName:`Ben Skowronek`,
@@ -476,6 +507,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`224`,
             college:`Notre Dame`,
+            photo:`https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAMP89c.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg&x=1564&y=275`
         },
         {
             playerName:`Robert Woods`,
@@ -485,6 +517,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`195`,
             college:`USC`,
+            photo:`https://theramswire.usatoday.com/wp-content/uploads/sites/64/2021/07/Robert-Woods-throwback-yellow.jpeg?w=1000`
         },
         {
             playerName:`Jacob Harris`,
@@ -494,6 +527,7 @@ const seedDb = async ()=>{
             height:`6'5`,
             weight:`211`,
             college:`UCF`,
+            photo:`https://www.downtownrams.com/wp-content/uploads/2021/06/ZW6KGKJNFRA66KFQD7GIU63HDU-1024x683.jpg`
         },
         {
             playerName:`Tyler Higbee`,
@@ -503,6 +537,7 @@ const seedDb = async ()=>{
             height:`6'6`,
             weight:`255`,
             college:`Western Kentucky`,
+            photo:`https://ca-times.brightspotcdn.com/dims4/default/36d4b9d/2147483647/strip/true/crop/4549x3033+0+0/resize/568x379!/quality/90/?url=https:%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4c%2F8d%2Fa3f1bc6f487a8502fb9524c6c943%2Fhttps-delivery.gettyimages.com%2Fdownloads%2F1175041515.jpg`
         },
         {
             playerName:`Brycen Hopkins`,
@@ -512,6 +547,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`245`,
             college:`Purdue`,
+            photo:`https://th.bing.com/th/id/OIP.8BwghUsdpoZKNp8gmdsXmQHaEK?pid=ImgDet&rs=1`
         },
         {
             playerName:`Johnny Mundt`,
@@ -521,6 +557,8 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`233`,
             college:`Oregon`,
+            photo:`https://imagesvc.timeincapp.com/v3/fan/image?url=https://ramblinfan.com/wp-content/uploads/getty-images/2016/04/1028654660-850x560.jpeg&c=sc&w=590&h=389`
+
         },
         {
             playerName:`Matt Gay`,
@@ -530,6 +568,8 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`232`,
             college:`Utah`,
+            photo:`https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/jf9irwr358wro3acm1ha`
+
         },
         {
             playerName:`Jimmy Garappolo`,
@@ -539,6 +579,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`225`,
             college:`Eastern Illinois`,
+            photo:`https://i0.wp.com/www.sportsgossip.com/wp-content/uploads/2019/04/jimmy-garoppolo.jpg?fit=1600%2C900&ssl=1`
         },
         {
             playerName:`Trey Lance`,
@@ -548,6 +589,7 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`224`,
             college:`North Dakota State`,
+            photo:`https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1gctW8.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg`
         },
         {
             playerName:`JaMycal Hasty`,
@@ -557,6 +599,7 @@ const seedDb = async ()=>{
             height:`5'8`,
             weight:`205`,
             college:`Baylor`,
+            photo:`https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https:%2F%2Fninernoise.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2020%2F04%2F1217688599-850x560.jpeg`
         },
         {
             playerName:`Elijah Mitchell`,
@@ -566,6 +609,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`200`,
             college:`Louisana Lafayette`,
+            photo:`https://www.trendsmap.com/ipx/https://pbs.twimg.com/ext_tw_video_thumb/1432098396295229443/pu/img/PzJXmKNmMMwqX0gZ.jpg`
         },
         {
             playerName:`Raheem Mostert`,
@@ -575,6 +619,7 @@ const seedDb = async ()=>{
             height:`5'10`,
             weight:`205`,
             college:`Purdue`,
+            photo:`https://cdn.vox-cdn.com/thumbor/WyK2UOEnV15QBgY6jfR0Tf0ELTs=/0x0:4608x3072/1200x800/filters:focal(1863x146:2599x882)/cdn.vox-cdn.com/uploads/chorus_image/image/65804476/usa_today_13655581.0.jpg`
         },
         {
             playerName:`Trey Sermon`,
@@ -584,6 +629,8 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`215`,
             college:`Ohio State`,
+            photo:`https://profootballdraft.com/wp-content/uploads/2020/08/Sermon_Tre_8009-e1601492648346-1024x831-1.jpg`
+
         },
         {
             playerName:`Jeff Wilson Jr.`,
@@ -593,6 +640,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`213`,
             college:`North Texas`,
+            photo:`https://s.yimg.com/uu/api/res/1.2/2cMNID43YVvZfC1XAODHoA--~B/aD0xMDgwO3c9MTkyMDtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/csnbayarea.com/f8c130c595f0322412155458c70b2bda`
         },
         {
             playerName:`Kyle Juszczyk`,
@@ -602,6 +650,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`235`,
             college:`Harvard`,
+            photo:`https://th.bing.com/th/id/R.3f1282107b1308eea526c84f082c8e23?rik=bRnpl%2f4fwfmNVA&pid=ImgRaw&r=0`
         },
         {
             playerName:`Brandon Aiyuk`,
@@ -611,6 +660,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`200`,
             college:`Arizona State`,
+            photo:`https://th.bing.com/th/id/OIP.SgjjMGH5tVnSXTe_y2wmagHaE8?pid=ImgDet&rs=1`
         },
         {
             playerName:`Jalen Hurd`,
@@ -620,6 +670,7 @@ const seedDb = async ()=>{
             height:`6'5`,
             weight:`230`,
             college:`Baylor`,
+            photo:`https://th.bing.com/th/id/OIP.iuDYC5EZG5Z5nE053gq2nQHaEK?pid=ImgDet&rs=1`
         },
         {
             playerName:`Richie James`,
@@ -629,6 +680,7 @@ const seedDb = async ()=>{
             height:`5'9`,
             weight:`185`,
             college:`Middle Tennessee`,
+            photo:`https://s.hdnux.com/photos/73/13/73/15515365/5/1200x0.jpg`
         },
         {
             playerName:`Jauan Jennings`,
@@ -638,6 +690,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`212`,
             college:`Tennessee`,
+            photo:`https://a.espncdn.com/i/headshots/nfl/players/full/3886598.png`
         },
         {
             playerName:`Deebo Samuel`,
@@ -647,6 +700,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`215`,
             college:`South Carolina`,
+            photo:`https://media.pff.com/2020/07/USATSI_13852467_168392742_lowres.jpg`
         },
         {
             playerName:`Mohamed Sanu Sr.`,
@@ -656,6 +710,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`210`,
             college:`Rutgers`,
+            photo:`https://media.pff.com/2020/07/USATSI_13852467_168392742_lowres.jpg`
         },
         {
             playerName:`Trent Sherfield`,
@@ -665,6 +720,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`219`,
             college:`Vanderbilt`,
+            photo:`https://s.hdnux.com/photos/01/21/56/27/21423575/3/1200x0.jpg`
         },
         {
             playerName:`Ross Dwelley`,
@@ -674,6 +730,7 @@ const seedDb = async ()=>{
             height:`6'5`,
             weight:`235`,
             college:`San Diego`,
+            photo:`https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https:%2F%2Fninernoise.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2020%2F08%2F1195339209-850x560.jpeg`
         },
         {
             playerName:`George Kittle`,
@@ -683,6 +740,9 @@ const seedDb = async ()=>{
             height:`6'4`,
             weight:`250`,
             college:`Iowa`,
+            photo:`https://cdn.vox-cdn.com/thumbor/5neL9TjJb7iMpo351hhECpM9sXY=/0x0:3467x4972/1200x800/filters:focal(1402x1293:1956x1847)/cdn.vox-cdn.com/uploads/chorus_image/image/67560748/1272530843.jpg.0.jpg`
+
+
         },
         {
             playerName:`Charlie Woerner`,
@@ -692,6 +752,7 @@ const seedDb = async ()=>{
             height:`6'5`,
             weight:`241`,
             college:`Georgie`,
+            photo:`https://www.nbcsports.com/sites/rsnunited/files/styles/metatags_opengraph/public/article/hero/Woerner_C_Getty_1290776749.jpg`
         },
         {
             playerName:`Robbie Gould`,
@@ -701,6 +762,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`190`,
             college:`Penn State`,
+            photo:`https://th.bing.com/th/id/OIP.dIZRtQHmK05H9RAts09juwHaEK?pid=ImgDet&rs=1`
         },
         {
             playerName:`Dak Prescott`,
@@ -710,6 +772,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`238`,
             college:`Mississippi State`,
+            photo:`https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2133,w_3200/https:%2F%2Fnflmocks.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2019%2F05%2F1052717374.jpeg`
         },
         {
             playerName:`Cooper Rush`,
@@ -719,6 +782,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`225`,
             college:`Central Michigan`,
+            photo:`https://specials-images.forbesimg.com/imageserve/1193345341/960x0.jpg?fit=scale`
         },
         {
             playerName:`Rico Dowdle`,
@@ -728,6 +792,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`215`,
             college:`South Carolina`,
+            photo:`https://cdn.vox-cdn.com/thumbor/_nSJBbWXbHXUW4q1Z8H2yV3EMdQ=/0x0:3000x2000/1520x1013/filters:focal(1260x760:1740x1240)/cdn.vox-cdn.com/uploads/chorus_image/image/69775061/1234815951.0.jpg`
         },
         {
             playerName:`Tony Pollard`,
@@ -737,6 +802,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`209`,
             college:`Memphis`,
+            photo:`https://i0.wp.com/insidethestar.com/wp-content/uploads/2019/11/bmartin_dallas-cowboys_tony-pollards-fresh-legs-could-prove-invaluable-down-the-stretch.jpg?fit=1200%2C800&ssl=1`
         },
         {
             playerName:`Sewo Olonilua`,
@@ -746,6 +812,8 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`240`,
             college:`TCU`,
+            photo:`https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4038539.png`
+
         },
         {
             playerName:`Ezekiel Elliot`,
@@ -755,6 +823,7 @@ const seedDb = async ()=>{
             height:`6'0`,
             weight:`228`,
             college:`Ohio State`,
+            photo:`https://www.newslconsulting.com/wp-content/uploads/2019/11/gettyimages-1185548571-e1572973945353.jpg?quality=65&strip=all&w=780`
         },
         {
             playerName:`Noah Brown`,
@@ -764,6 +833,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`225`,
             college:`Ohio State`,
+            photo:`https://media.wtsp.com/assets/WFAA/images/cfed7915-7697-4f47-b8b1-cf4197d51cb6/cfed7915-7697-4f47-b8b1-cf4197d51cb6_1920x1080.jpg`
         },
         {
             playerName:`Amari Cooper`,
@@ -773,6 +843,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`210`,
             college:`Alabama`,
+            photo:`https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/yoWYNxkNnTc382xvVwovPO3aCcc=/1660x934/smart/filters:no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/PESI5MBD6JGQVP4ZDYCDAVTRGE.jpg`
         },
         {
             playerName:`Simi Fehoko`,
@@ -782,6 +853,7 @@ const seedDb = async ()=>{
             height:`6'3`,
             weight:`220`,
             college:`Stanford`,
+            photo:`https://i.ytimg.com/vi/HYucggDEQrA/maxresdefault.jpg`
         },
         {
             playerName:`Michael Gallup`,
@@ -791,6 +863,7 @@ const seedDb = async ()=>{
             height:`6'1`,
             weight:`198`,
             college:`Colorado State`,
+            photo:`https://th.bing.com/th/id/R.ca9708bd190be202ad429fc681a3b021?rik=%2bfNxrI%2bMqvNhvQ&pid=ImgRaw&r=0`
         },
         {
             playerName:`CeeDee Lamb`,
@@ -800,6 +873,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`189`,
             college:`Oklahoma`,
+            photo:`https://i2.wp.com/insidethestar.com/wp-content/uploads/2020/09/matthewlenix_star-blog_ceedee-lamb-tops-all-rookie-wrs-in-week-1-scaled.jpg?fit=2560%2C1707&ssl=1`
         },
         {
             playerName:`Malik Turner`,
@@ -809,6 +883,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`202`,
             college:`Illinois`,
+            photo:`https://s.yimg.com/ny/api/res/1.2/VmpOPkz4IxD6z4Ux1OdlnA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDA-/https://s.yimg.com/uu/api/res/1.2/4vG6cLZCIAsWmA.euEatog--~B/aD0xMjYxO3c9MTczNjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/dallas_cowboys_wire_usa_today_sports_articles_693/e14c5abb24930ca451241d2665a7d83f`
         },
         {
             playerName:`TJ Vasher`,
@@ -818,6 +893,7 @@ const seedDb = async ()=>{
             height:`6'5`,
             weight:`210`,
             college:`Texas Tech`,
+            photo:`https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/fcK-hNCX2UOWN3H3rFiJmINjPiI=/1660x934/smart/filters:no_upscale()/cloudfront-us-east-1.images.arcpublishing.com/dmn/VGIWOM3EFFEJVBAE3U5UVXO4CA.jpg`
         },
         {
             playerName:`Cedrick Wilson`,
@@ -827,6 +903,7 @@ const seedDb = async ()=>{
             height:`6'2`,
             weight:`200`,
             college:`Boise State`,
+            photo:`https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/cowboys/du5xzgxyzzfaxseqbhkx`
         },
         {
             playerName:`Blake Jarwin`,
