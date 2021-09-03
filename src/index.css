@@ -50,3 +50,8 @@ button {
     background-color: white;
     border: none;
 }
+
+.dialogTitle {
+    background-color :rgb(21,35,72);
+    color: white;
+}
