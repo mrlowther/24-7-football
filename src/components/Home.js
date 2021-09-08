@@ -1,5 +1,6 @@
 import React from 'react';
 import Cards from './Cards';
+import Footer from './Footer';
 import Typography from '@material-ui/core/Typography';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <Footer />
     </>
   );
 }
