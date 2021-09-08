@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid, Typography } from '@material-ui/core';
-import TeamModal from './TeamModal';
+import Footer from './Footer';
+import API from '../utils/API';
 
 // NFC East
 import logoCowboys from './images/team-logos/logo-cowboys.png';
@@ -51,141 +52,6 @@ import logoChiefs from './images/team-logos/logo-chiefs.png';
 import logoRaiders from './images/team-logos/logo-raiders.png';
 import logoChargers from './images/team-logos/logo-chargers.png';
 
-const prefix = './images/team-logos/logo-';
-
-const teams = [
-  {
-    name: 'Dallas Cowboys',
-    logo: '../images/team-logos/logo-cowboys.png',
-    id: 1,
-  },
-  {
-    name: 'New York Giants',
-    logo: '../images/team-logos/logo-giants.gif',
-    id: 2,
-  },
-  {
-    name: 'Philadelphia Eagles',
-    id: 3,
-  },
-  {
-    name: 'Washington Football Team',
-    id: 4,
-  },
-  {
-    name: 'Chicago Bears',
-    id: 5,
-  },
-  {
-    name: 'Detroit Lions',
-    id: 6,
-  },
-  {
-    name: 'Green Bay Packers',
-    id: 7,
-  },
-  {
-    name: 'Minnesota Vikings',
-    id: 8,
-  },
-  {
-    name: 'Atlanta Falcons',
-    id: 9,
-  },
-  {
-    name: 'Carolina Panthers',
-    id: 10,
-  },
-  {
-    name: 'New Orleans Saints',
-    id: 11,
-  },
-  {
-    name: 'Tampa Bay Buccaneers',
-    id: 12,
-  },
-  {
-    name: 'Arizona Cardinals',
-    id: 13,
-  },
-  {
-    name: 'Los Angeles Rams',
-    id: 14,
-  },
-  {
-    name: 'San Francisco 49ers',
-    id: 15,
-  },
-  {
-    name: 'Seattle Seahawks',
-    id: 16,
-  },
-  {
-    name: 'Buffalo Bills',
-    id: 17,
-  },
-  {
-    name: 'Miami Dolphins',
-    id: 18,
-  },
-  {
-    name: 'New England Patriots',
-    id: 19,
-  },
-  {
-    name: 'New York Jets',
-    id: 20,
-  },
-  {
-    name: 'Baltimore Ravens',
-    id: 21,
-  },
-  {
-    name: 'Cincinnati Bengals',
-    id: 22,
-  },
-  {
-    name: 'Cleveland Browns',
-    id: 23,
-  },
-  {
-    name: 'Pittsburgh Steelers',
-    id: 24,
-  },
-  {
-    name: 'Houston Texans',
-    id: 25,
-  },
-  {
-    name: 'Indianapolis Colts',
-    id: 26,
-  },
-  {
-    name: 'Jacksonville Jaguars',
-    id: 27,
-  },
-  {
-    name: 'Tennessee Titans',
-    id: 28,
-  },
-  {
-    name: 'Denver Broncos',
-    id: 29,
-  },
-  {
-    name: 'Kansas City Chiefs',
-    id: 30,
-  },
-  {
-    name: 'Las Vegas Raiders',
-    id: 31,
-  },
-  {
-    name: 'Los Angeles Chargers',
-    id: 32,
-  },
-];
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -197,428 +63,276 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function renderTeams(props) {
-  const logoList = props.teams;
-  const listItems = teams.map((team) =>
-    <li key={team.toString()}>
-      {team}
-    </li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
-}
-
 export default function Search() {
+
+  const teams = [
+
+    // NFC East
+    ['Dallas Cowboys',logoCowboys],
+    ['New York Giants',logoGiants],  
+    ['Philadelphia Eagles',logoEagles],
+    ['Washington Football Team',logoWft],
+
+    // NFC North
+    ['Chicago Bears',logoBears],
+    ['Detroit Lions',logoLions],
+    ['Green Bay Packers',logoPackers],
+    ['Minnesota Vikings',logoVikings],
+
+    // NFC South
+    ['Atlanta Falcons',logoFalcons],
+    ['Carolina Panthers',logoPanthers],
+    ['New Orleans Saints',logoSaints],
+    ['Tampa Bay Buccaneers',logoBuccaneers],
+
+    // NFC West
+    ['Arizona Cardinals',logoCardinals],
+    ['Los Angeles Rams',logoRams],
+    ['San Francisco 49ers',logo49ers],
+    ['Seattle Seahawks',logoSeahawks],
+
+    // AFC East
+    ['Buffalo Bills',logoBills],
+    ['Miami Dolphins',logoDolphins],
+    ['New England Patriots',logoPatriots],
+    ['New York Jets',logoJets],
+
+    // AFC North
+    ['Baltimore Ravens',logoRavens],
+    ['Cincinnati Bengals',logoBengals],
+    ['Cleveland Browns',logoBrowns],
+    ['Pittsburgh Steelers',logoSteelers],
+
+    // AFC South
+    ['Houston Texans',logoTexans],
+    ['Indianapolis Colts',logoColts],
+    ['Jacksonville Jaguars',logoJaguars],
+    ['Tennessee Titans',logoTitans],
+
+    // AFC West
+    ['Denver Broncos',logoBroncos],
+    ['Kansas City Chiefs',logoChiefs],
+    ['Las Vegas Raiders',logoRaiders],
+    ['Los Angeles Chargers',logoChargers]
+  ];
+ 
+  const revertTeams = () => {
+
+    let chooseTeamEl = document.getElementById('chooseTeamDiv');
+    let choosePlayerEl = document.getElementById('choosePlayerDiv');
+
+    let teamDispEl = document.getElementById('teamDisplayDiv');
+    let allTeamsEl = document.getElementById('allTeamsDiv');
+    let backtoTeamBtn = document.getElementById('backToTeam');
+    let backtoTeamsBtn = document.getElementById('backToTeams');
+
+    console.log('reverting...');
+
+    chooseTeamEl.style.display='block';
+    choosePlayerEl.style.display='none';
+    teamDispEl.style.display='none';
+    backtoTeamBtn.style.display='none';
+    backtoTeamsBtn.style.display='none';
+    allTeamsEl.style.display='block';
+  }
+
+  const revertTeam = () => {
+
+    let chooseTeamEl = document.getElementById('chooseTeamDiv');
+    let choosePlayerEl = document.getElementById('choosePlayerDiv');
+
+    let teamDispEl = document.getElementById('teamDisplayDiv');
+    let playerDispEl = document.getElementById('playerDisplayDiv');
+
+    let allTeamsEl = document.getElementById('allTeamsDiv');
+    let backtoTeamBtn = document.getElementById('backToTeam');
+    let backtoTeamsBtn = document.getElementById('backToTeams');
+
+    console.log('reverting...');
+
+    chooseTeamEl.style.display='none';
+    choosePlayerEl.style.display='block';
+    teamDispEl.style.display='block';
+    backtoTeamBtn.style.display='none';
+    backtoTeamsBtn.style.display='block';
+    allTeamsEl.style.display='none';
+    playerDispEl.style.display='none';
+
+  }
+
+  const displayPlayer = (incoming,logo) => {
+
+    let chooseTeamEl = document.getElementById('chooseTeamDiv');
+    let choosePlayerEl = document.getElementById('choosePlayerDiv');
+
+    let teamDispEl = document.getElementById('teamDisplayDiv');
+    let allTeamsEl = document.getElementById('allTeamsDiv');
+    let playerDispEl = document.getElementById('playerDisplayDiv');
+    let backtoTeamBtn = document.getElementById('backToTeam');
+    let backtoTeamsBtn = document.getElementById('backToTeams');
+
+    chooseTeamEl.style.display='none';
+    choosePlayerEl.style.display='none';
+    teamDispEl.style.display='none';
+    backtoTeamBtn.style.display='block';
+    backtoTeamsBtn.style.display='none';
+    allTeamsEl.style.display='none';
+    playerDispEl.style.display='block';
+   
+    API.getPlayersByName(incoming).then((response) => {
+
+      // console.log(response.data);
+      let playerInfo = response.data;
+
+      let buildCard = '';
+
+      buildCard+='<div style="margin-bottom:50px;"><div id="playerCard">';
+
+        buildCard+='<div id="playerCardHeader">';
+          buildCard+='<img src="'+logo+'" id="playerCardLogo" alt="" />';
+          buildCard+='<h1>#'+playerInfo[0].number+'&nbsp;'+playerInfo[0].playerName+'<br />'
+          buildCard+=playerInfo[0].team+'</h1>'
+        buildCard+='</div>';
+
+        buildCard+='<div id="playerCardBody">';
+          buildCard+='<div>';
+            buildCard+='<img src="'+playerInfo[0].photo+'" id="playerCardPhoto" />';
+          buildCard+='</div>';
+
+        buildCard+='<div id="playerCardStats">';
+          buildCard+='<h1>Position: '+playerInfo[0].position+'</h1>'
+          buildCard+='<h1>Height: '+playerInfo[0].height+'</h1>'
+          buildCard+='<h1>Weight: '+playerInfo[0].weight+'</h1>'
+          buildCard+='<h1>College: '+playerInfo[0].college+'</h1>'
+        buildCard+='</div>';   
+
+      buildCard+='</div></div>';   
+
+      // console.log(buildCard);
+
+      playerDispEl.innerHTML=buildCard;
+
+ });
+};
+  
+    const chooseTeam = (value,logo) => {
+
+    let chooseTeamEl = document.getElementById('chooseTeamDiv');
+    let choosePlayerEl = document.getElementById('choosePlayerDiv');
+
+    let teamDispEl = document.getElementById('teamDisplayDiv');
+    let allTeamsEl = document.getElementById('allTeamsDiv');
+    let backtoTeamBtn = document.getElementById('backToTeam');
+    let backtoTeamsBtn = document.getElementById('backToTeams');
+
+    teamDispEl.style.display='block';
+
+    console.log('\n\n\nTeam '+value);
+
+    API.getPlayersByTeam(value).then((response) => {
+
+      // console.log(response.data);
+      let teamRoster = response.data;
+
+      // console.log(teamRoster[0].playerName);
+
+      let buildRoster= '';
+
+      buildRoster+='<div id="container">';
+      buildRoster+='<div id="thumbLogoDiv"><h1>'+value+' Team Roster</h1><br /><img src="'+logo+'" id="thumbLogoPic" alt="" /></div>';
+
+      buildRoster+='<div id="thumbnailGallery">';   
+
+          for (let i = 0; i < teamRoster.length; i ++) {
+
+            buildRoster+='<div class="playerThumbs">';
+              buildRoster+='<p class="thumbText">'+teamRoster[i].playerName+'</p>';
+
+              //console.log(teamRoster[i].photo);
+
+              if (teamRoster[i].photo === null) buildRoster+='<p class="thumbText" style="color:darkgrey">[no photo available]</p>';
+              else buildRoster+='<img src="'+teamRoster[i].photo+'" class="thumbnail" id="'+teamRoster[i].playerName+'" />';
+            buildRoster+='</div>';
+          }    
+
+      buildRoster+='</div></div>';
+
+      teamDispEl.innerHTML=buildRoster;
+
+      document.getElementById('thumbnailGallery')
+      .addEventListener('click', event => {
+        if (event.target.className === 'thumbnail') {
+          console.log(event.target.id);
+          displayPlayer(event.target.id,logo);
+        }
+      });
+
+      chooseTeamEl.style.display='none';
+      choosePlayerEl.style.display='block';
+      backtoTeamsBtn.style.display='block';
+      backtoTeamBtn.style.display='none';
+      allTeamsEl.style.display='none';
+    });
+}
 
   const classes = useStyles();
 
+  var teamsList = teams.map(function(team, index) {
+    return (
+      <Grid item xs={12} sm={4} md={3} lg={3} key={index}>
+
+          <Paper>
+
+            {/* <TeamModal alignItems="center" name={team[0]} logo={team[1]} key={index}></TeamModal> */}
+
+            <div align="center">
+              <Typography variant="h5" align="center">{team[0]}</Typography>
+              <img src={team[1]} className="teamLogo" id={team[0]} alt="" onClick={() => chooseTeam(team[0],team[1])} />
+            </div>
+          </Paper>
+
+        </Grid>
+    );
+  });
+  
   return (
-
     <div className={classes.root}>
-      <br /><br />
 
-      {/* <Typography variant="h3">Choose a Team!</Typography> */}
-
-      {/* <Typography variant="h4" gutterBottom>National Football Conference</Typography> */}
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>NFC East</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-           {/* {teams.map((team) => ( 
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-              <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">{team.name}</Typography>
-                <img src="{team.logo}" className="teamLogo" alt="" />
-              </Paper>
-            </Grid>
-            ))} */}
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Dallas<br/>Cowboys</Typography>
-                <img src={logoCowboys} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">New&nbsp;York<br/>Giants</Typography>
-                <img src={logoGiants} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Philadelphia<br/>Eagles</Typography>
-                <img src={logoEagles} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Washington<br/>Football&nbsp;Team</Typography>
-                <img src={logoWft} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>     
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>NFC North</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Chicago<br/>Bears</Typography>
-                <img src={logoBears} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Detroit<br/>Lions</Typography>
-                <img src={logoLions} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Green&nbsp;Bay<br/>Packers</Typography>
-                <img src={logoPackers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Minnesota<br/>Vikings</Typography>
-                <img src={logoVikings} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>     
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>NFC South</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Atlanta<br/>Falcons</Typography>
-                <img src={logoFalcons} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Carolina<br/>Panthers</Typography>
-                <img src={logoPanthers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">New&nbsp;Orleans<br/>Saints</Typography>
-                <img src={logoSaints} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Tampa&nbsp;Bay<br/>Buccaneers</Typography>
-                <img src={logoBuccaneers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>    
-
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>NFC West</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Arizona<br/>Cardinals</Typography>
-                <img src={logoCardinals} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Los&nbsp;Angeles<br/>Rams</Typography>
-                <img src={logoRams} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">San&nbsp;Francisco<br/>49ers</Typography>
-                <img src={logo49ers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Seattle<br/>Seahawks</Typography>
-                <img src={logoSeahawks} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>     
-
-      {/* <Typography variant="h4">American Football Conference</Typography> */}
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>AFC East</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Buffalo<br/>Bills</Typography>
-                <img src={logoBills} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Miami<br/>Dolphins</Typography>
-                <img src={logoDolphins} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">New&nbsp;England<br/>Patriots</Typography>
-                <img src={logoPatriots} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">New&nbsp;York<br/>Jets</Typography>
-                <img src={logoJets} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>     
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>AFC North</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Baltimore<br/>Ravens</Typography>
-                <img src={logoRavens} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Cincinnati<br/>Bengals</Typography>
-                <img src={logoBengals} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Cleveland<br/>Browns</Typography>
-                <img src={logoBrowns} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Pittburgh<br/>Steelers</Typography>
-                <img src={logoSteelers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>     
+      <br />
+      <div id="chooseTeamDiv"><Typography variant="h3">Choose a Team!</Typography></div>
+      <div id="choosePlayerDiv"><Typography variant="h3">Choose a Player!</Typography></div>
+      <center><div><button id="backToTeams" onClick={() => revertTeams()}>back to all teams</button></div></center>
+      <center><div><button id="backToTeam" onClick={() => revertTeam()}>back to team</button></div></center>
+      <br />
       
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>AFC South</Typography>
+      <div id="allTeamsDiv">
+        <Grid container spacing={1} alignItems="flex-start" gutterBottom>
+          { teamsList }
         </Grid>
+      </div>
 
-        <Grid item xs={12} sm={12} md={9} lg={9}>
+      <Grid container spacing={1} alignItems="flex-start" gutterBottom>
+        <div id="teamDisplayDiv"></div>      
+      </Grid>
 
-          <Grid container spacing={1} alignItems="flex-start">
+      <Grid container spacing={1} alignItems="flex-start" gutterBottom>
+        <div id="playerDisplayDiv"></div>      
+      </Grid>
 
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Houston<br/>Texans</Typography>
-                <img src={logoTexans} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Jacksonville<br/>Jaguars</Typography>
-                <img src={logoJaguars} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Indianapolis<br/>Colts</Typography>
-                <img src={logoColts} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Tennessee<br/>Titans</Typography>
-                <img src={logoTitans} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>    
-
-      <Grid container spacing={3} alignItems="flex-start" gutterBottom>
-
-        <Grid item xs={12} sm={12} md={3} lg={3}>
-          <Typography variant="h4" gutterBottom>AFC West</Typography>
-        </Grid>
-
-        <Grid item xs={12} sm={12} md={9} lg={9}>
-
-          <Grid container spacing={1} alignItems="flex-start">
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Denver<br/>Broncos</Typography>
-                <img src={logoBroncos} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Kansas&nbsp;City<br/>Chiefs</Typography>
-                <img src={logoChiefs} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Las&nbsp;Vegas<br/>Raiders</Typography>
-                <img src={logoRaiders} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-                <Paper>
-                <TeamModal alignItems="center"></TeamModal>
-                <Typography variant="h5" align="center">Los&nbsp;Angeles<br/>Chargers</Typography>
-                <img src={logoChargers} className="teamLogo" alt="" />
-                </Paper>
-            </Grid>
-
-          </Grid>
-
-        </Grid>
-
-      </Grid>      
-
+      <Footer />
     </div>
-
   );
 }
+
+      {/* {teamRoster.map((val) => {
+        return (
+          <>
+          <h1>Name: {val.playerName}</h1>
+          <h1>Number: {val.number}</h1>
+          <h1>Position: {val.position}</h1>
+          <h1>Photo:</h1><img src={val.photo} alt={val.playerName} className="playerPhoto" />
+          <hr />
+          </>
+          )
+        })} */}
+        

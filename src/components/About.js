@@ -1,15 +1,8 @@
 import React from 'react';
-import { Grid, Card, CardContent, makeStyles, TextField, Typography, Button} from '@material-ui/core';
-
-const useStyles = makeStyles({
-  field: {
-      marginRight: 20,
-  }
-});
+import Footer from './Footer';
+import { Card, CardContent, Typography } from '@material-ui/core';
 
 export default function About() {
-
-  const classes = useStyles();
 
   return (
     <>
@@ -31,7 +24,7 @@ export default function About() {
       </CardContent>
       
     </Card>
-
+    <Footer />
     </>
     );
 }

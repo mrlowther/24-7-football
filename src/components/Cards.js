@@ -1,15 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Grid, Typography } from '@material-ui/core';
-
-import logo1 from './images/team-logos/logo-chiefs.png';
-import logo2 from './images/team-logos/logo-seahawks.png';
-import logo3 from './images/team-logos/logo-packers.png';
-import logo4 from './images/team-logos/logo-buccaneers.png';
-import logo5 from './images/team-logos/logo-49ers.png';
-import logo6 from './images/team-logos/logo-chargers.png';
-import logo7 from './images/team-logos/logo-patriots.png';
-import logo8 from './images/team-logos/logo-dolphins.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
