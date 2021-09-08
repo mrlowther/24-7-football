@@ -323,16 +323,4 @@ export default function Search() {
     </div>
   );
 }
-
-      {/* {teamRoster.map((val) => {
-        return (
-          <>
-          <h1>Name: {val.playerName}</h1>
-          <h1>Number: {val.number}</h1>
-          <h1>Position: {val.position}</h1>
-          <h1>Photo:</h1><img src={val.photo} alt={val.playerName} className="playerPhoto" />
-          <hr />
-          </>
-          )
-        })} */}
         

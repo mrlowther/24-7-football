@@ -1,17 +1,15 @@
 import React from 'react';
 import { Grid, Card, CardContent, makeStyles, TextField, Typography, Button} from '@material-ui/core';
-
 const useStyles = makeStyles({
   field: {
       marginRight: 20,
   }
 });
-
 function Signup() {
     const classes = useStyles();
     return (
     <>
-        <Card style={{ maxWidth:500, margin:“0 auto” }}>
+        <Card style={{ maxWidth:500, margin:"0 auto" }}>
             <CardContent>
                 <form>
                 <Grid container spacing={1}>
@@ -60,3 +58,11 @@ function Signup() {
   );
 }
 export default Signup;
+
+import React from 'react';
+import { Grid, Card, CardContent, makeStyles, TextField, Typography, Button} from '@material-ui/core';
+const useStyles = makeStyles({
+  field: {
+      marginRight: 20,
+  }
+});
