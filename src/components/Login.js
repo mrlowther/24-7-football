@@ -45,21 +45,6 @@ function Login() {
                         />
                     </Grid>
 
-                    
-
-                    {/* <Grid xs={12} sm={12} item>
-                        <TextField
-                            className = {classes.field}
-                            label="Message"
-                            placeholder="What's on your mind?"
-                            variant="outlined"
-                            required
-                            multiline
-                            rows={4}
-                            fullWidth
-                        />
-                    </Grid> */}
-
                     <Grid xs={12} sm={12} item>
                         <Button type="submit" variant="contained" color="primary">Submit</Button>
                     </Grid>
